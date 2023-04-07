@@ -1,0 +1,81 @@
+﻿<Window x:Class="OptOK.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OptOK"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="OOO 'OptOK'" Height="550" Width="450"
+        Icon="/Views/myicon.ico"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
+        >
+
+
+    <Grid Margin="25" Background="White">
+
+        <StackPanel>
+
+            <Image Margin="0 20 0 5" Source="/Resources/myicon.png" Height="100" x:Name="imgIcon"/>
+            <TextBlock Margin="10 15 0 5" HorizontalAlignment="Center" 
+                       FontSize="28" FontWeight="Bold" Text="Авторизация" 
+            />
+            <Grid Margin="0 0 0 20">
+                <Button Height="40" x:Name="btnLogAsGuest"    
+                     Style="{StaticResource MaterialDesignFlatButton}"
+                     materialDesign:ElevationAssist.Elevation="Dp2" 
+                     FontSize="18" Content="Войти как гость"
+                     Foreground="#FF68A7EE"
+                     materialDesign:ButtonAssist.CornerRadius="10" 
+                     Click="btnLogAsGuest_Click" Margin="0,0,214,0"
+                    
+                />
+
+                <Button Width="174"  Height="40" x:Name="btnCreateAccount" HorizontalAlignment="Left"   
+                     Style="{StaticResource MaterialDesignFlatButton}"
+                     materialDesign:ElevationAssist.Elevation="Dp2" 
+                     Foreground="#FF68A7EE"
+                     FontSize="18" Content="Создать аккаунт"
+                    
+                     materialDesign:ButtonAssist.CornerRadius="10" Margin="208,-2,0,2" 
+                        ></Button>
+
+            </Grid>
+
+            <TextBox Width="auto" Margin="10,0,10,0" x:Name="textBlockUserName" FontSize="16" 
+                     materialDesign:HintAssist.Hint="Введите логин" BorderThickness="2"  
+                      BorderBrush="{DynamicResource MaterialDesignDivider}"                 
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"               
+            />
+            <PasswordBox Width="auto" Margin="10,0,10,0" x:Name="passwordBoxUserPassword" FontSize="16"
+                     materialDesign:HintAssist.Hint="Введите пароль" BorderThickness="2"
+                     BorderBrush="{DynamicResource MaterialDesignDivider}"
+                     Style="{StaticResource MaterialDesignOutlinedPasswordBox}"
+                     
+            />
+            <!-- <TextBlock Margin="0 15 0 5" HorizontalAlignment="Center" 
+                       FontSize="20" FontWeight="SemiBold" Text="Авторизация"
+            /> -->
+            <TextBlock Margin="0 15 0 5" HorizontalAlignment="Center" 
+                       FontSize="20" FontWeight="SemiBold"
+                       x:Name="tbFail"
+                       Foreground="#DDCE2828"
+                       
+            />
+            <Button  Margin="10 15 10 5" Width="Auto"  Height="40" x:Name="btnLogIn"    
+                     Style="{StaticResource MaterialDesignFlatMidBgButton}"
+                     materialDesign:ElevationAssist.Elevation="Dp2" 
+                     FontSize="18" Content="Войти"
+                     Background="#FF68A7EE" BorderBrush="#FF68A7EE"
+                     materialDesign:ButtonAssist.CornerRadius="10" Click="btnLogIn_Click"     
+            />
+            <!-- <TextBlock 
+                Margin="0 10 0 5" HorizontalAlignment="Center" 
+                FontSize="18" FontWeight="Light" Text="Или" 
+            /> -->
+        </StackPanel>
+
+    </Grid>
+
+</Window>
